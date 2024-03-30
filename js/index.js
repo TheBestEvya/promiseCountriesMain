@@ -1,5 +1,4 @@
 const API_URL = "https://restcountries.com/v3.1"
-let allCountries;
 const createCountryCard = (({name,flags,population,region,capital}) => {
     document.getElementsByClassName("countries-grid")[0].innerHTML+=`<a href="#" class="country scale-effect" data-country-name="${name.common}">
     <div class="country-flag">
@@ -18,8 +17,9 @@ const createCountryCard = (({name,flags,population,region,capital}) => {
     </div>
     </a>`
 })
-const fetchAPI = async () => {
-    const promise = fetch(API_URL + "/all")
+const fetchAPI = async (urlEndpoint) => {
+    const promise = fetch(API_URL + urlEndpoint)
     promise.then((res) => res.json()).then(countries=> countries.map(country=> createCountryCard(country)))
 }
- fetchAPI();
+
+ fetchAPI("/all");
