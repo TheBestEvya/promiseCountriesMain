@@ -21,5 +21,14 @@ const fetchAPI = async (urlEndpoint) => {
     const promise = fetch(API_URL + urlEndpoint)
     promise.then((res) => res.json()).then(countries=> countries.map(country=> createCountryCard(country)))
 }
-
+const emptyDisplay = ()=>{
+  document.getElementsByClassName("countries-grid")[0].innerHTML = ""
+}
  fetchAPI("/all");
+ document.getElementById('filterOpt').onclick = ()=>{ //TODO:: fix closing dropdown
+  const list = document.getElementById('dropdownList')
+  list.style.opacity = '90%'
+ }
+window.onclick=()=>{
+  document.getElementById('dropdownList').style.opacity = '0%'
+}

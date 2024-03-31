@@ -119,7 +119,7 @@
   position: absolute;
   margin-top: 5px;
   opacity: 0;
-  visibility: hidden;
+  /* visibility: hidden; */
   z-index: 1;
   padding: 15px 0;
   transform: translateY(-20px);
