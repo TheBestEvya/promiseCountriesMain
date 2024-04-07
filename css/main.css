@@ -118,8 +118,8 @@
 .filters .dropdown-body {
   position: absolute;
   margin-top: 5px;
-  opacity: 0;
-  visibility: hidden;
+  /* opacity: 0; */
+  /* visibility: hidden; */
   z-index: 1;
   padding: 15px 0;
   transform: translateY(-20px);
@@ -222,4 +222,8 @@
   font-size: 16px;
   text-transform: capitalize;
   margin-bottom: 15px;
+}
+.dark-mode {
+  background-color: rgb(37, 33, 33);
+  color: white;
 }

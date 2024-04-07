@@ -52,12 +52,20 @@
           <i class="fa-regular fa-magnifying-glass search-icon"></i>
           <input type="text" class="search-input" placeholder="Search for a country..." />
         </div>
-        <div class="dropdown-wrapper">
-          <div class="dropdown-header flex flex-jc-sb flex-ai-c">
+        <div id="dropdownWrap" class="dropdown-wrapper">
+          <!-- <div class="dropdown-header flex flex-jc-sb flex-ai-c">
             <span>Filter by Region</span>
-            <i class="fa-regular fa-chevron-down icon"></i>
-          </div>
-          <div class="dropdown-body">
+            <i id="filterOpt" class="fa-regular fa-chevron-down icon"></i>
+          </div> -->  
+          <select id="filterOpt" class="dropdown-body">
+            <option value="all">all</option>
+            <option value="africa">africa</option>
+            <option value="america">america</option>
+            <option value="asia">asia</option>
+            <option value="europe">europe</option>
+            <option value="oceania">oceania</option>
+          </select>
+          <!-- <div id="dropdownList" class="dropdown-body">
             <ul>
               <li data-region="all">all</li>
               <li data-region="africa">africa</li>
@@ -66,7 +74,7 @@
               <li data-region="europe">europe</li>
               <li data-region="oceania">oceania</li>
             </ul>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -74,7 +82,7 @@
     <main class="main">
       <div class="container">
         <section class="countries-grid">
-          <a href="#" class="country scale-effect" data-country-name="Afghanistan">
+          <!-- <a href="#" class="country scale-effect" data-country-name="Afghanistan">
             <div class="country-flag">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg"
@@ -128,9 +136,10 @@
                 <li><strong>capital: </strong>Belmopan</li>
               </ul>
             </div>
-          </a>
+          </a> -->
         </section>
       </div>
     </main>
   </body>
+  <script src="./js/index.js"></script>
 </html>
